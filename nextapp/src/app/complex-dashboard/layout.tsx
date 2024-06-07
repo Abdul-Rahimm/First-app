@@ -22,7 +22,7 @@ export default function DashboardLayout({
       <RevenueMetrics />
       <Notifications /> */}
 
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", backgroundColor:"white"}}>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div>{users}</div>
           <div>{revenue}</div>

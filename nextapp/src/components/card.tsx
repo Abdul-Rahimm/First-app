@@ -12,8 +12,8 @@ const Card = ({ children }: { children: React.ReactNode }) => {
   return (
     <div
       style={{
-        color: "red",
-        padding: "10pm",
+        color: "black",
+        padding: "100px",
         border: "1px solid #ddd",
         margin: "10px",
         boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
