@@ -1,5 +1,5 @@
 import '@styles/globals.css'
-import { Children } from 'react'
+import Nav from '@components/Nav'
 
 export const metadata = {
     title: "Promptopia",
@@ -14,8 +14,10 @@ const RootLayout = ({children}) => {
             <div className='gradient'/>
 
             <main className='app'>
+              <Nav/>
                 {children}
             </main>
+
         </div>
       </body>
     </html >
@@ -23,3 +25,5 @@ const RootLayout = ({children}) => {
 }
 
 export default RootLayout
+// nav bar is going to be here
+// its going to be present in all the pages
