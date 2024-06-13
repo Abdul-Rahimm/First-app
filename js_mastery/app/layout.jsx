@@ -1,29 +1,31 @@
-import '@styles/globals.css'
-import Nav from '@components/Nav'
+import "@styles/globals.css";
+import Provider from "@components/Provider";
+import Nav from "@components/Nav";
 
 export const metadata = {
-    title: "Promptopia",
-    description:"Discover and share AI prompts"
-}
+  title: "Promptopia",
+  description: "Discover and share AI prompts",
+};
 
-const RootLayout = ({children}) => {
+const RootLayout = ({ children }) => {
   return (
-    <html lang='en'  >
+    <html lang="en">
       <body>
-        <div className='main'>
-            <div className='gradient'/>
+        <Provider>
+          <div className="main">
+            <div className="gradient" />
+          </div>
 
-            <main className='app'>
-              <Nav/>
-                {children}
-            </main>
-
-        </div>
+          <main className="app">
+            <Nav />
+            {children}
+          </main>
+        </Provider>
       </body>
-    </html >
-  )
-}
+    </html>
+  );
+};
 
-export default RootLayout
+export default RootLayout;
 // nav bar is going to be here
 // its going to be present in all the pages
