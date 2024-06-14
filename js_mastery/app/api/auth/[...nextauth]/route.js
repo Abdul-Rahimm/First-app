@@ -13,8 +13,8 @@ const handler = NextAuth({
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         })
     ],
-
-    //existing and running session - user's data
+    callbacks:{
+        //existing and running session - user's data
     async session({session}){
         //updating the sessionID of user
         const sessionUser = await User.findOne({
@@ -49,6 +49,8 @@ const handler = NextAuth({
 
 
     }
+    },
+    
 })
 
 export {handler as GET, handler as POST}
