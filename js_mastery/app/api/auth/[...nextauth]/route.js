@@ -13,8 +13,14 @@ const handler = NextAuth({
         })
     ],
 
+    //existing and running session - user's data
     async session({session}){
+        //updating the sessionID of user
+        const sessionUser = await User.findOne({
+            email: session.user.email
+        })
 
+        session.user.id = sessionUser._id.toString();
     },
 
     async signIn({profile}){
