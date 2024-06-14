@@ -1,9 +1,10 @@
 //within here we will setup providers such as google authentication
+// "use client"
 import NextAuth from "next-auth/next";
 import GoogleProvider from 'next-auth/providers/google'
 import { connectToDB } from "@utils/database";
 import User from "@models/user";
-import { useStyleRegistry } from "styled-jsx";
+
 
 const handler = NextAuth({
     providers:[
